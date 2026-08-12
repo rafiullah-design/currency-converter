@@ -37,6 +37,10 @@ const updateflag=(element)=>{
 btn.addEventListener("click",async(event)=>{
   event.preventDefault();
   let amount=document.querySelector(".amount input");
+  if(amount.value < 1 ){
+    amount.value=1;
+    alert("Amount cannot be less than 1")
+  }
   const URL=`${Basic_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
   let response=await fetch(URL)
   let data=await response.json();
