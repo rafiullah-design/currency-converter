@@ -92,3 +92,15 @@ span{
     position: absolute;
     right: 20px;
 }
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .footer span {
+        position: static;
+    }
+}
